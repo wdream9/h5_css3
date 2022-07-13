@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D</title>
+    <style>
+      /* 定义动画 */
+      @keyframes dh {
+        0% {
+            transform: translate(0);
+        }
+        100% {
+            transform: translate(1000px,0);
+        }
+      }
+      .from {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(214, 48, 48);
+        /* 使用动画 */
+        /* animation-name: dh; */
+        /* 动画时间 */
+        /* animation-duration: 2s; */
+        /* 运动曲线 匀速 linear */
+        /* animation-timing-function: ease; */
+        /* 指定动画何时开始 */
+        /* animation-delay: 0s; */
+        /* 动画执行次数 */
+        /* animation-iteration-count: infinite; */
+        /* 是否反方向播放 默认 normal */
+        /* animation-direction: alternate; */
+        /* 规定动画结束后的状态  默认backwards回到开始状态，可以停留在结束状态 forwards*/
+        /* animation-fill-mode: forwards; */
+        /* 规定动画是否正在运行或停止 默认 running ，有pause */
+        /* animation-play-state: running; */
+        animation: dh 2s linear 0s infinite alternate forwards;
+      }
+      .from:hover {
+        /* 规定动画是否正在运行或停止 默认 running ，有pause */
+        animation-play-state: paused;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="from"></div>
+  </body>
+</html>

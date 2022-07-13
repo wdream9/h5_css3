@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css3高级-结构伪类选择器</title>
+    <style>
+      /* 选择第一个 */
+      ul li:first-of-type {
+        background-color: rgb(213, 80, 80);
+      }
+      ul li:last-of-type {
+        background: rgb(76, 42, 191);
+      }
+      */ ul li:nth-of-type(n) {
+        background-color: rgb(19, 222, 114);
+      }
+
+      /* nth-of-type(n) 与 last-of-type  的区别*/
+
+      /* 执行顺序：
+            1、找section标签
+            2、nth-child()进行编号，并且选出编号为 1 的元标签
+            3、对比标签 nth-child() 的标签，标签相同则生效，不同样式则不生效
+      */
+
+      /* 这个不生效 */
+      section div:nth-child(1) {
+        background-color: red;
+      }
+      /*生效*/
+      section div:nth-of-type(1) {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>我是第 1 个孩子</li>
+      <li>我是第 2 个孩子</li>
+      <li>我是第 3 个孩子</li>
+      <li>我是第 4 个孩子</li>
+      <li>我是第 5 个孩子</li>
+      <li>我是第 6 个孩子</li>
+      <li>我是第 7 个孩子</li>
+      <li>我是第 8 个孩子</li>
+    </ul>
+    <section>
+      <p>我是第 1 个孩子</p>
+      <div>我是第 2 个孩子</div>
+      <p>我是第 3 个孩子</p>
+      <p>我是第4 个孩子</p>
+      <div>我是第 5 个孩子</div>
+      <div>我是第 6 个孩子</div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>伪类选择器</title>
+    <style>
+      /* 未访问过的颜色*/
+      a:link{
+        color: rgb(77, 35, 228);
+        text-decoration: none;
+      }
+      /* 访问过后的样式 */
+      a:visited{
+        color: red;
+        text-decoration: overline;
+      }
+      /* 鼠标经过的样式 */
+      a:hover{
+        color: brown;
+        font-size: 50px;
+      }
+      /* 鼠标按下还没有弹起时的样式 */
+      a:active{
+        font-size: 25px;
+        color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#">伪类选择器</a>
+  </body>
+</html>

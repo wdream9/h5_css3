@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>border</title>
+    <style>
+      .one {
+        width: 100px;
+        height: 100px;
+        border: 1px solid red;
+        margin: 10px 20px;
+      }
+      .two {
+        width: 200px;
+        height: 200px;
+        border: 1px solid rgb(23, 12, 227);
+        margin: 0 auto; /*只能让盒子自身水平居中*/
+        text-align: center; /* 只能让行内元素和行内块元素剧中对齐*/
+      }
+      .t1,
+      .t2 {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+        line-height: 80px;
+      }
+      .t1 {
+        background-color: rgb(37, 76, 132);
+      }
+      .t2 {
+        background-color: rgb(237, 59, 59);
+      }
+      .father {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(127, 121, 121);
+        /*
+        解决外边距 塌陷问题
+        */
+        /* border: 1px solid transparent; */
+        /* padding: 1px; */
+        overflow: hidden;
+        margin-top: 50px;
+
+      }
+      .son {
+        width: 100px;
+        height: 100px;
+        margin-top: 20px;
+        /* border: 1px solid blue; */
+        background-color: rgb(83, 30, 219);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- <div class="one">one</div>
+    <div class="two">
+      <span>t1</span>
+      <div class="t1">
+        <span>t1</span>
+      </div>
+      <div class="t2">t2</div>
+    </div> -->
+
+    <div class="father">
+      <div class="son"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文字溢出解决</title>
+    <style>
+      .t {
+        width: 300px;
+        border: 1px solid red;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .more {
+        margin: 10px;
+        border: 1px solid red;
+        width: 200px;
+        height: 100px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        /* 弹性伸缩盒子模型显示 */
+        display: -webkit-box;
+        /* 限制在一个块元素显示的文字行数 */
+        -webkit-line-clamp: ;
+        /* 设置或检索伸缩盒对象的子元素的排列方式 */
+        -webkit-box-orient: vertical;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+         单行文本溢出显示省略号-必须满足三个条件 
+         1、先强制一行内显示文本
+            white-space：nowrap；（默认normal自动换行）
+         2、超出的部分隐藏
+            overflow:hidden
+         3、文字用省略号替代超出的部分
+            text-overflow:ellipsis
+    -->
+
+    <div class="t">
+      单行文本溢出显示省略号-必须满足三个条件 1、先强制一行内显示文本
+      white-space：nowrap；（默认normal自动换行） 2、超出的部分隐藏
+      overflow:hidden 3、文字用省略号替代超出的部分 text-overflow:ellipsis
+    </div>
+
+    <!-- 
+        多行文本溢出显示省略号
+        有较大的兼容性问题，适合webkit浏览器或移动端（移动端大部分都是webkit内核）
+     -->
+
+    <div class="more">
+      多行文本溢出显示省略号
+      有较大的兼容性问题，适合webkit浏览器或移动端（移动端大部分都是webkit内核）
+      多行文本溢出显示省略号
+      有较大的兼容性问题，适合webkit浏览器或移动端（移动端大部分都是webkit内核）
+    </div>
+  </body>
+</html>

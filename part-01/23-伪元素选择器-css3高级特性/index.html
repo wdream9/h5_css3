@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>23-伪元素选择器-css3高级特性</title>
+    <style>
+      .wei{
+        width: 200px;
+        height: 200px;
+        background-color:pink;
+      }
+      .wei::before{
+        content: '伪元素';
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        line-height: 30px;
+      }
+      .wei::after{
+        content: '选择器';
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wei">
+      
+    </div>
+  </body>
+</html>

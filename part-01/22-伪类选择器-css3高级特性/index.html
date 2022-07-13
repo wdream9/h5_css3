@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css3高级-结构伪类选择器</title>
+    <style>
+      /* 选择li中的第一个孩子 */
+      ul li:first-child {
+        color: red;
+        font-weight: 700;
+      }
+      /* 选择最后一个元素 */
+      ul li:last-child {
+        color: red;
+        font-weight: 700;
+      }
+      /*
+         选择某个父元素的一个或多个特定的子元素 
+         :nth-child(n)：
+            1、n可以是数字，也可以是表达式
+            2、如果是数字那就按顺进行选择，第一个元素是 1
+            3、n可以是关键字：even（偶数），odd（奇数）
+         */
+      ul li:nth-child(6) {
+        background-color: pink;
+        font-weight: 700;
+      }
+
+      /* 
+            选出偶数
+        */
+      ol li:nth-child(even) {
+        background-color: pink;
+        font-weight: 700;
+      }
+      /* 选出奇数 */
+      ol li:nth-child(odd) {
+        background-color: rgb(7, 7, 7);
+        font-weight: 700;
+      }
+
+      /* 直接输入n表示：
+        从 n 值从0开始每次加1，往后计算，这里必须是n，不能是其他字母。    
+    */
+      .leve ol li:nth-child(2n) {
+        background: rgb(24, 158, 68);
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>我是第 1 个孩子</li>
+      <li>我是第 2 个孩子</li>
+      <li>我是第 3 个孩子</li>
+      <li>我是第 4 个孩子</li>
+      <li>我是第 5 个孩子</li>
+      <li>我是第 6 个孩子</li>
+      <li>我是第 7 个孩子</li>
+      <li>我是第 8 个孩子</li>
+    </ul>
+
+    <ol>
+      <li>我是第 1 个孩子</li>
+      <li>我是第 2 个孩子</li>
+      <li>我是第 3 个孩子</li>
+      <li>我是第 4 个孩子</li>
+      <li>我是第 5 个孩子</li>
+      <li>我是第 6 个孩子</li>
+      <li>我是第 7 个孩子</li>
+      <li>我是第 8 个孩子</li>
+      <li>我是第 9 个孩子</li>
+      <li>我是第 10 个孩子</li>
+    </ol>
+    <div class="leve">
+      <ol>
+        <li>我是第 1 个孩子</li>
+        <li>我是第 2 个孩子</li>
+        <li>我是第 3 个孩子</li>
+        <li>我是第 4 个孩子</li>
+        <li>我是第 5 个孩子</li>
+        <li>我是第 6 个孩子</li>
+        <li>我是第 7 个孩子</li>
+        <li>我是第 8 个孩子</li>
+        <li>我是第 9 个孩子</li>
+        <li>我是第 10 个孩子</li>
+      </ol>
+    </div>
+  </body>
+</html>
