@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setp案例</title>
+    <style>
+      /* 定义动画 */
+      @keyframes dh {
+        0% {
+          width: 0px;
+        }
+        100% {
+          width: 300px;
+        }
+      }
+      div {
+        height: 600px;
+        width: 600px;
+        margin: 0 auto;
+        background:url(../imgs/login-bg.png) no-repeat;
+        /* animation: dh 4s steps(10) forwards; */
+        animation: dh infinite linear;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>
