@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D-transfromlate</title>
+    <style>
+      body{
+        /* 透视越小越立体 */
+        perspective: 100px;
+      }
+      .div1 {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        transition: all .5s;
+        margin: 100px auto;
+      }
+      .div1:hover{
+        transform: rotateX(360deg);
+      }
+      .div2 {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        transition: all .5s;
+        margin: 300px auto;
+      }
+      .div2:hover{
+        transform:  (360deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1"></div>
+    <div class="div2"></div>
+  </body>
+</html>
