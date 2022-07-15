@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>移动布局-理想视口</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      /*
+       传统盒子模型 padding border会改变盒子大小
+      盒子宽度 = width + border + padding
+       */
+      div:nth-child(1) {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        border: 10px solid red;
+        padding: 30px;
+      }
+      /* css3 盒子模型  不改变盒子大小 */
+      div:nth-child(2) {
+          /* box-sizing: content-box; */
+        box-sizing: border-box;
+        width: 100px;
+        height: 100px;
+        margin: 100px;
+        background-color: rgb(17, 230, 35);
+        border: 10px solid red;
+        padding: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <div></div>
+  </body>
+</html>

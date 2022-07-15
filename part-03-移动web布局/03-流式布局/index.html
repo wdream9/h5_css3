@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>流式布局</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      section {
+        width: 100%;
+        max-width: 700px;
+        min-width: 300px;
+      }
+      div:nth-child(1) {
+        float: left;
+        width: 50%;
+        height: 400px;
+        background-color: rgb(200, 27, 27);
+      }
+      div:nth-child(2) {
+        float: left;
+
+        width: 50%;
+        height: 400px;
+        background-color: rgb(87, 17, 229);
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div></div>
+      <div></div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>移动布局-理想视口</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      img {
+        /* 
+        在 iphone7中 375px 刚好占满屏幕，1px = 2个物理像素 
+        375px 等于 750px 刚好沾满 屏幕
+        */
+        width: 300px;
+      }
+      div {
+        width: 500px;
+        height: 500px;
+        background: url(../../imgs/3.jpg) no-repeat;
+        /* background-size: 500px 200px; */
+        /* 高度等比缩放 */
+        /* background-size: 500px; */
+        /* background-size: 50%; */
+        /* 把盒子的整个背景全部覆盖--以高度为准 */
+        /* background-size: cover; */
+        /* 把盒子的整个背景全部覆盖--以宽度为准 */
+        background-size: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="../../imgs/2.jpg" alt="" />
+    <div></div>
+  </body>
+</html>
