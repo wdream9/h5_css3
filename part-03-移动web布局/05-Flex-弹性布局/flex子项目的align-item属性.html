@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex子项目的align-item属性</title>
+    <style>
+      section{
+        display: flex;
+        width: 60%;
+        height: 200px;
+        background-color: pink;
+        align-items: flex-end;
+      }
+      section span{
+        height: 100px;
+        width: 100px;
+        margin: 5px;
+        background: red;
+      }
+      section span:nth-child(3){
+        /* 覆盖 侧轴属性 */
+        align-self: flex-start;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="out">
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+    </section>
+  </body>
+</html>
