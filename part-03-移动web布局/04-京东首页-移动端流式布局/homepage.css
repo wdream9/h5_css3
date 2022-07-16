@@ -48,7 +48,7 @@ ul li:nth-child(4) {
   overflow: hidden;
   height: 44px;
   text-align: center;
-  background-color: #E43130;
+  background-color: #e43130;
 }
 .search-wrap .search-btn {
   position: absolute;
@@ -59,9 +59,9 @@ ul li:nth-child(4) {
   height: 44px;
   line-height: 44px;
 }
-.search-wrap img{
-    width: 20px;
-    vertical-align: middle;
+.search-wrap img {
+  width: 20px;
+  vertical-align: middle;
 }
 .search-wrap .search-login {
   position: absolute;
@@ -73,6 +73,7 @@ ul li:nth-child(4) {
   line-height: 44px;
 }
 .search {
+  position: relative;
   height: 34px;
   margin: 0 50px;
   line-height: 34px;
@@ -80,3 +81,32 @@ ul li:nth-child(4) {
   margin-top: 5px;
   background-color: #fff;
 }
+.search .jd-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 34px;
+  margin: 8px 8px 0px 15px;
+  background: url(./imgs/h-JD.png) no-repeat ;
+  background-size: 20px 15px;
+}
+.search::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 42px;
+    height: 20px;
+    margin-top: 7px;
+    border-right: 2px solid #D8D8D8;
+}
+
+ .search .jd-search{
+    position: absolute;
+    top: 8px;
+    left: 55px;
+    width: 18px;
+    height: 15px;
+    background: url(./imgs/jd-sprites.png) -166px 0px;
+    background-size: 18px 15px;
+ }
