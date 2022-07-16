@@ -1,0 +1,9 @@
+div {
+  background-color: red;
+}
+div:nth-child(1) {
+  background-color: blue;
+}
+div:nth-child(1) {
+  background-color: blue;
+}
