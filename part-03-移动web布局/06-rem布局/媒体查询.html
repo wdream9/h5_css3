@@ -6,21 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>媒体查询</title>
     <style>
-      /* 我们在屏幕上 并且 最大宽度是 800px 设置我们想要的样式 */
-      @media screen and (max-width: 800px) {
-        body {
-          background-color: red;
+      @media screen and (min-width: 540px) {
+        html{
+          font-size: 20px;
         }
       }
-      /* 屏幕 且 最小宽度为 800px  */
       @media screen and (min-width: 800px) {
-        body {
-          background-color: rgb(133, 15, 236);
+        html{
+          font-size: 50px;
         }
+      }
+      div{
+        height: 10rem;
+        width: 15rem;
+        font-size: .6rem;
+        background-color: rgb(149, 22, 22);
       }
     </style>
   </head>
   <body>
-    
+    <div>
+      标题
+    </div>
   </body>
 </html>
