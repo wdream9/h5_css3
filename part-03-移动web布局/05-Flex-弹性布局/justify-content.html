@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>justify-content弹性布局</title>
+    <style>
+      .out {
+        display: flex;
+        width: 600px;
+        height: 400px;
+        background-color: pink;
+        /* 1、指定主轴 */
+        flex-direction: row;
+        /* 侧轴元素排列样式 align-item 单行元素有效*/
+        /* align-items: center; */
+         /* 多行侧轴元素 样式 */
+        /* align-content: center; */
+        align-content: space-between;
+
+        /* flex-wrap 是否自动换行 默认不换行，不换行会导致我们的 盒子的宽度变化及时是设置盒子的宽度 */
+        flex-wrap: wrap;
+      }
+      .out span {
+        width: 150px;
+        height: 100px;
+        margin: 5px;
+        background: rgb(200, 54, 54);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="out">
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+      <span>4</span>
+      <span>5</span>
+      <span>6</span>
+      <span>7</span>
+      <span>8</span>
+    </div>
+  </body>
+</html>
