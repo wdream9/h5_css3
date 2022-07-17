@@ -1,0 +1,4 @@
+/* cssrem这个插件默认的font-size 是 16px */
+div{
+    width: 1rem;
+}
