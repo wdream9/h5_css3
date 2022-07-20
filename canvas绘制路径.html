@@ -79,7 +79,13 @@
       ctx.font = "48px georgia";
       ctx.fillText("Canvas text", 50, 150);
 
-      
+      var image = new Image();
+      image.src = "./imgs/01.png";
+      image.onload = function () {
+        ctx.drawImage(image, 50, 50);
+        ctx.drawImage(image, 100, 100, 185, 175, 100, 100, 200, 200);
+      };
+
     </script>
   </body>
 </html>
