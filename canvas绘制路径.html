@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>canvas绘制路径</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas class="myCanvas"></canvas>
+    <script>
+      var canvas = document.querySelector(".myCanvas");
+      var width = (canvas.width = window.innerWidth);
+      var height = (canvas.height = window.innerHeight);
+      var ctx = canvas.getContext("2d");
+      //  fillStyle 属性（和 CSS 属性 色值 一致）设置填充色
+      ctx.fillStyle = "rgb(0, 0, 0)";
+      //  fillRect 方法绘制一个覆盖整个区域的矩形（前两个参数是矩形左上顶点的坐标，后两个参数是矩形的长宽，现在你知道 width 和 height 的作用了吧
+      ctx.fillRect(0, 0, width, height);
+
+      // ctx.fillStyle = "rgb(255, 0, 0)";
+      // ctx.fillRect(50, 50, 100, 150);
+
+      // ctx.fillStyle = "rgba(255, 0, 255, 0.75)";
+      // ctx.fillRect(25, 100, 175, 50);
+
+      // ctx.strokeStyle = "rgb(255, 255, 255)";
+      // // lineWidth 属性（接受一个表示描边宽度像素值的数字）
+      // ctx.lineWidth = 5;
+      // ctx.strokeRect(25, 25, 175, 200);
+
+      //       beginPath()：在钢笔当前所在位置开始绘制一条路径。在新的画布中，钢笔起始位置为 (0, 0)。
+      // moveTo()：将钢笔移动至另一个坐标点，不记录、不留痕迹，只将钢笔“跳”至新位置。
+      // fill()：通过为当前所绘制路径的区域填充颜色来绘制一个新的填充形状。
+      // stroke()：通过为当前绘制路径的区域描边，来绘制一个只有边框的形状。
+      // 路径也可和矩形一样使用 lineWidth 和 fillStyle / strokeStyle 等功能。
+
+      ctx.fillStyle = "rgb(255, 0, 0)";
+      ctx.beginPath();
+      ctx.moveTo(50, 50);
+      // 绘制路径
+      ctx.fill();
+
+      function degToRad(degrees) {
+        return (degrees * Math.PI) / 180;
+      }
+      ctx.fillStyle = "rgb(255, 0, 0)";
+      ctx.beginPath();
+      ctx.moveTo(50, 50);
+      ctx.lineTo(150, 50);
+      var triHeight = 50 * Math.tan(degToRad(60));
+      ctx.lineTo(100, 50 + triHeight);
+      ctx.lineTo(50, 50);
+      ctx.fill();
+
+      ctx.fillStyle = "rgb(0, 0, 255)";
+      ctx.beginPath();
+      ctx.arc(150, 106, 50, degToRad(0), degToRad(360), false);
+      ctx.fill();
+
+      ctx.fillStyle = "yellow";
+      ctx.beginPath();
+      ctx.arc(200, 106, 50, degToRad(-45), degToRad(45), true);
+      ctx.lineTo(200, 106);
+      ctx.fill();
+
+      ctx.strokeStyle = "white";
+      ctx.lineWidth = 1;
+      ctx.font = "36px arial";
+      ctx.strokeText("Canvas text", 50, 50);
+
+      ctx.fillStyle = "red";
+      ctx.font = "48px georgia";
+      ctx.fillText("Canvas text", 50, 150);
+
+      
+    </script>
+  </body>
+</html>

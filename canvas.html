@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap 101 Template</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas class="myCanvas"></canvas>
+    <script>
+      var canvas = document.querySelector(".myCanvas");
+      var width = (canvas.width = window.innerWidth);
+      var height = (canvas.height = window.innerHeight);
+      var ctx = canvas.getContext("2d");
+      //  fillStyle 属性（和 CSS 属性 色值 一致）设置填充色
+      ctx.fillStyle = "rgb(0, 0, 0)";
+      //  fillRect 方法绘制一个覆盖整个区域的矩形（前两个参数是矩形左上顶点的坐标，后两个参数是矩形的长宽，现在你知道 width 和 height 的作用了吧
+      ctx.fillRect(0, 0, width, height);
+
+      ctx.fillStyle = "rgb(255, 0, 0)";
+      ctx.fillRect(50, 50, 100, 150);
+
+      ctx.fillStyle = "rgba(255, 0, 255, 0.75)";
+      ctx.fillRect(25, 100, 175, 50);
+
+      ctx.strokeStyle = "rgb(255, 255, 255)";
+      // lineWidth 属性（接受一个表示描边宽度像素值的数字）
+      ctx.lineWidth = 5;
+      ctx.strokeRect(25, 25, 175, 200);
+
+    </script>
+  </body>
+</html>
